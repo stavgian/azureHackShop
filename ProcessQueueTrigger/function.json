@@ -1,0 +1,21 @@
+{
+    "bindings": [
+      {
+        "name": "myQueueItem",
+        "type": "queueTrigger",
+        "direction": "in",
+        "queueName": "image-queue",
+        "connection": "hackshopstorage_STORAGE"
+      },
+      {
+        "type": "documentDB",
+        "name": "outputDocument",
+        "databaseName": "hackdb",
+        "collectionName": "imageTags",
+        "createIfNotExists": false,
+        "connection": "hackshopcosmos_DOCUMENTDB",
+        "direction": "out"
+      }
+    ],
+    "disabled": false
+  }

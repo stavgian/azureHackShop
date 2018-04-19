@@ -1,0 +1,19 @@
+{
+    "bindings": [
+      {
+        "name": "myBlob",
+        "type": "blobTrigger",
+        "direction": "in",
+        "path": "private/{name}",
+        "connection": "hackshopstorage_STORAGE"
+      },
+      {
+        "type": "queue",
+        "name": "outputQueueItem",
+        "queueName": "image-queue",
+        "connection": "hackshopstorage_STORAGE",
+        "direction": "out"
+      }
+    ],
+    "disabled": false
+  }
